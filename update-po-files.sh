@@ -67,7 +67,7 @@ do
 done
 
 #Generate/update template pot file
-xgettext -f $LOCALDIR/POTFILES -k_ -k_HKI --force-po --from-code utf-8 -o $LOCALDIR/kicad.pot
+xgettext -f $LOCALDIR/POTFILES -k_ -k_HKI -kwxPLURAL:1,2 --force-po --from-code utf-8 -o $LOCALDIR/kicad.pot
 
 rm $LOCALDIR/POTFILES
 
@@ -94,6 +94,9 @@ for i in $LINGUAS
 do
   echo "## $i"
   msgmerge --force-po $LOCALDIR/$i/kicad.po $LOCALDIR/kicad.pot -o $LOCALDIR/$i/kicad.po 2> /dev/null
+  if [ "$i" = "en" ] ; then
+    msgen $LOCALDIR/$i/kicad.po -o $LOCALDIR/$i/kicad.po.tmp && mv $LOCALDIR/$i/kicad.po.tmp $LOCALDIR/$i/kicad.po
+  fi
   msgfmt --statistics $LOCALDIR/$i/kicad.po 2>&1 >>/dev/null |
     while IFS=",." read A B C D ; do
       echo $A

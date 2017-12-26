@@ -3,11 +3,13 @@ msgstr ""
 "Project-Id-Version: KICAD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-06-20 09:50-0800\n"
-"PO-Revision-Date: 2017-06-20 09:50-0800\n"
+"PO-Revision-Date: 2017-08-23 11:22+0200\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
+"Language-Team:\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Last-Translator:\n"
 "X-Poedit-KeywordsList: _HKI;_\n"
 "X-Poedit-Basepath: E:/kicad\n"
 "X-Generator: Poedit 1.8.8\n"
@@ -63,17 +65,17 @@ msgstr "Eeschema  - 原理图编辑器"
 msgid "Schematic library editor"
 msgstr "原理图库编辑器"
 
-#: kicad/commandframe.cpp:71
-msgid "Pcbnew - Printed circuit board editor"
-msgstr "Pcbnew - PCB编辑器"
-
-#: kicad/commandframe.cpp:74
-msgid "PCB footprint editor"
-msgstr "PCB 封装编辑器"
-
 #: kicad/commandframe.cpp:77
-msgid "GerbView - Gerber viewer"
-msgstr "GerbView - Gerber 浏览器"
+msgid "PCB layout editor"
+msgstr "PCB板编辑器"
+
+#: kicad/commandframe.cpp:81
+msgid "PCB library editor"
+msgstr "PCB封装库编辑器"
+
+#: kicad/commandframe.cpp:85
+msgid "Gerber viewer"
+msgstr "Gerber浏览器"
 
 #: kicad/commandframe.cpp:81 kicad/menubar.cpp:388
 msgid ""
@@ -81,9 +83,13 @@ msgid ""
 "or Pcbnew elements"
 msgstr "Bitmap2Component - 转换位图到 Eeschema 或  Pcbnew "
 
-#: kicad/commandframe.cpp:85 kicad/menubar.cpp:394
+#: kicad/commandframe.cpp:94
+msgid "Calculator tools"
+msgstr "计量工具"
+
+#: kicad/menubar.cpp:402
 msgid "Pcb calculator - Calculator for components, track width, etc."
-msgstr "PCB计算器 - 计算布线宽度等"
+msgstr "计量工具 - 计算布线宽度等"
 
 #: kicad/commandframe.cpp:88 kicad/menubar.cpp:399
 msgid "Pl editor - Worksheet layout editor"
@@ -9950,7 +9956,7 @@ msgstr "线或多边形(&L)"
 #: pcbnew/menubar_modedit.cpp:281 pcbnew/menubar_pcbframe.cpp:417
 #: pcbnew/tool_modedit.cpp:173 pcbnew/tool_pcb.cpp:453
 msgid "Add graphic line or polygon"
-msgstr "添加图形  线/多边形"
+msgstr "添加线或多边形"
 
 #: pcbnew/menubar_modedit.cpp:286 pcbnew/menubar_pcbframe.cpp:409
 #: eeschema/menubar_libedit.cpp:213
@@ -25407,3 +25413,104 @@ msgstr ""
 #~ "输入名称和路径。\n"
 #~ "\n"
 #~ "灰色项目是由系统或用户已在外部被定义环境变量的名称。"
+
+#: common/pgm_base.cpp:848
+msgid "Set Language"
+msgstr "设置语言"
+
+#: pcbnew/menubar_modedit.cpp:243 pcbnew/menubar_pcbframe.cpp:557
+msgid "Legacy Canva&s"
+msgstr "金典画布(&S)"
+
+#: pcbnew/menubar_modedit.cpp:251 pcbnew/menubar_pcbframe.cpp:565
+msgid "Open&GL Canvas"
+msgstr "OpenGL画布(&G)"
+
+#: pcbnew/menubar_modedit.cpp:259 pcbnew/menubar_pcbframe.cpp:573
+msgid "&Cairo Canvas"
+msgstr "Cairo画布(&C)"
+ 
+msgid "Select All"
+msgstr "全选"
+
+#: pcbnew/dialogs/dialog_design_rules_base.cpp:27
+msgid "Net Classes"
+msgstr "网络类表"
+
+#: pcbnew/dialogs/dialog_design_rules_base.cpp:97
+msgid "Net Class Membership"
+msgstr "网络类全部成员"
+
+msgid "Routing Options"
+msgstr "布线选项"
+
+#: pcbnew/dialogs/dialog_design_rules_base.cpp:191
+msgid "Minimum track width"
+msgstr "导线最小宽度"
+
+#: pcbnew/dialogs/dialog_design_rules_base.cpp:202
+msgid "Minimum via diameter"
+msgstr "导孔最小直径"
+
+#: pcbnew/dialogs/dialog_design_rules_base.cpp:213
+msgid "Minimum via drill"
+msgstr "钻孔最小直径"
+
+msgid "Allow micro vias (uVias)"
+msgstr "允许微孔"
+
+#: kicad/menubar.cpp:269
+msgid "&Archive Current Project"
+msgstr "把当前工程打包存档(&A)"
+
+#: kicad/menubar.cpp:270
+msgid "Archive all needed project files into zip archive"
+msgstr "把当前工程打包成ZIP文件"
+
+#: kicad/menubar.cpp:276
+msgid "&Unarchive Project"
+msgstr "把存档文件解压缩(&U)"
+
+#: kicad/menubar.cpp:277
+msgid "Unarchive project files from zip archive"
+msgstr "选择一个ZIP工程文件，并解压缩"
+
+#: kicad/commandframe.cpp:89
+msgid "Import bitmap\n"
+"Convert bitmap images to schematic or PCB elements"
+msgstr "位图导入\n"
+"把位图转换为原理图或PCB可使用的元件"
+
+msgid "&Hotkeys Options"
+msgstr "快捷键选项(&H)"
+
+#: common/basicframe.cpp:694
+msgid "Icons Options"
+msgstr "图标选项"
+
+#: common/basicframe.cpp:684
+msgid "Icons in Menus"
+msgstr "在菜单中显示图标"
+
+msgid "Get &Involved"
+msgstr "加入KiCad"
+
+#: pcbnew/dialogs/dialog_design_rules.cpp:1096
+msgid "Netclass: <b>%s</b><br>"
+msgstr "网络类: <b>%s</b><br>"
+
+#: pcbnew/dialogs/dialog_design_rules.cpp:1005
+msgid " - <b>Track Size</b> (%f %s) &lt; <b>Min Track Size</b> (%f %s)<br>"
+msgstr " - <b>此网络类的布线宽度</b>(%f %s) &lt; <b>全局的导线最小宽度</b>(%f %s)<br>"
+
+#: pcbnew/dialogs/dialog_design_rules.cpp:1018
+msgid " - <b>Differential Pair Size</b> (%f %s) &lt; <b>Min Track Size</b> (%f %s)<br>"
+msgstr " - <b>此网络类的差分线宽度</b>(%f %s) &lt; <b>全局的导线最小宽度</b>(%f %s)<br>"
+
+#: pcbnew/dialogs/dialog_design_rules_base.cpp:54
+msgid "Diff Pair Width"
+msgstr "差分线宽度"
+
+#:pcbnew/dialogs/dialog_design_rules_base.cpp:55
+msgid "Diff Pair Gap"
+msgstr "差分线间距"
